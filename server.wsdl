@@ -6,3 +6,11 @@ xmlns:intf="http://localhost:8080/RestaurantSOAWP/AccessServer.jws" xmlns:soapen
  <wsdl:part name="nomRecette" type="xsd:string"/>
  <wsdl:part name="descriptionRecette" type="xsd:string"/>
  <wsdl:message name="idRecette">
+
+
+<wsdl:portType name="Recette">
+<wsdl:operation name="recette" parameterOrder="nomRecette","descriptionRecette","idRecette">
+<wsdl:input message="impl:" name=""/>
+<wsdl:output message="impl:" name=""/>
+</wsdl:operation>
+</wsdl:portType>
