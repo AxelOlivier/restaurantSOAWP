@@ -10,13 +10,13 @@ xmlns:intf="http://localhost:8080/RestaurantSOAWP/AccessServer.jws" xmlns:soapen
     </message>
     
      <wsdl:message name="addRecette"/>
-       <wsdl:message name="recetteResponse">
-      <wsdl:part name="recetteReturn"/>
+       <wsdl:message name="addRecetteResponse">
+      <wsdl:part name="addRecetteReturn"/>
     </message>
     
      <wsdl:message name="SupprRecette"/>
-       <wsdl:message name="recetteResponse">
-      <wsdl:part name="recetteReturn"/>
+       <wsdl:message name="SupprRecetteResponse">
+      <wsdl:part name="SupprRecetteReturn"/>
     </message>
 
 
@@ -38,7 +38,7 @@ xmlns:intf="http://localhost:8080/RestaurantSOAWP/AccessServer.jws" xmlns:soapen
 
   <binding name="essai_instanceBinding" type="typens:essai_instancePortType">
 
-  <operation name="Recette">
+  <operation name="recette">
       <soap:operation soapAction="urn:essai_instanceAction"/>
       <input>
         <soap:body namespace="urn:exemple" use="encoded" 
