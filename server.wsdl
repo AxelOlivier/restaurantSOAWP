@@ -31,7 +31,7 @@ xmlns:intf="http://localhost:8080/RestaurantSOAWP/AccessServer.jws" xmlns:soapen
       </output>
     </operation>
 
-      <service name="exempleService">
+  <service name="exempleService">
     <port name="essai_instancePort" binding="typens:essai_instanceBinding">
       <soap:address location="http://localhost:8080/RestaurantSOAWP/AccessServer.jws"/>
     </port>
