@@ -15,6 +15,14 @@ xmlns:intf="http://localhost:8080/RestaurantSOAWP/AccessServer.jws" xmlns:soapen
       <wsdl:input message="typens:recette"/>
       <wsdl:output message="typens:recetteResponse"/>
     </wsdl:operation>
+    <wsdl:operation name="addRecette">
+      <wsdl:input message="typens:addRecette"/>
+      <wsdl:output message="typens:addRecetteResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="supprRecette">
+      <wsdl:input message="typens:supprRecette"/>
+      <wsdl:output message="typens:supprRecetteResponse"/>
+    </wsdl:operation>
 </wsdl:portType>
 
   <binding name="essai_instanceBinding" type="typens:essai_instancePortType">
