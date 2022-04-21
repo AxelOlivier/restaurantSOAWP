@@ -8,6 +8,17 @@ xmlns:intf="http://localhost:8080/RestaurantSOAWP/AccessServer.jws" xmlns:soapen
        <wsdl:message name="recetteResponse">
       <wsdl:part name="recetteReturn"/>
     </message>
+    
+     <wsdl:message name="addRecette"/>
+       <wsdl:message name="recetteResponse">
+      <wsdl:part name="recetteReturn"/>
+    </message>
+    
+     <wsdl:message name="SupprRecette"/>
+       <wsdl:message name="recetteResponse">
+      <wsdl:part name="recetteReturn"/>
+    </message>
+
 
 
 <wsdl:portType name="Recette_PortType">
