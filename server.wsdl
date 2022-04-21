@@ -3,14 +3,38 @@ xmlns:intf="http://localhost:8080/RestaurantSOAWP/AccessServer.jws" xmlns:soapen
  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
  xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://localhost:8080/RestaurantSOAWP/AccessServer.jws">
 
- <wsdl:part name="nomRecette" type="xsd:string"/>
- <wsdl:part name="descriptionRecette" type="xsd:string"/>
- <wsdl:message name="idRecette">
+
+     <wsdl:message name="recette"/>
+       <wsdl:message name="recetteResponse">
+      <wsdl:part name="recetteReturn"/>
+    </message>
 
 
-<wsdl:portType name="Recette">
-<wsdl:operation name="recette" parameterOrder="nomRecette","descriptionRecette","idRecette">
-<wsdl:input message="impl:" name=""/>
-<wsdl:output message="impl:" name=""/>
-</wsdl:operation>
+<wsdl:portType name="Recette_PortType">
+<wsdl:operation name="recette">
+      <wsdl:input message="typens:recette"/>
+      <wsdl:output message="typens:recetteResponse"/>
+    </wsdl:operation>
 </wsdl:portType>
+
+  <binding name="essai_instanceBinding" type="typens:essai_instancePortType">
+
+  <operation name="Recette">
+      <soap:operation soapAction="urn:essai_instanceAction"/>
+      <input>
+        <soap:body namespace="urn:exemple" use="encoded" 
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body namespace="urn:exemple" use="encoded" 
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+
+      <service name="exempleService">
+    <port name="essai_instancePort" binding="typens:essai_instanceBinding">
+      <soap:address location="http://localhost:8080/RestaurantSOAWP/AccessServer.jws"/>
+    </port>
+  </service>
+
+</definitions>
