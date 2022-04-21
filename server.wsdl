@@ -2,7 +2,11 @@
 xmlns:intf="http://localhost:8080/RestaurantSOAWP/AccessServer.jws" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
  xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://localhost:8080/RestaurantSOAWP/AccessServer.jws">
-
+  
+   <message name="connPDO"/>
+       <message name="connPDOResponse">
+      <part name="connPDOReturn"/>
+    </message>
 
      <wsdl:message name="recette"/>
        <wsdl:message name="recetteResponse">
